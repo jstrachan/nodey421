@@ -1,1 +1,9 @@
 buildPack: javascript
+pipelineConfig:
+  pipelines:
+    overrides:
+      - pipeline: pullRequest
+        name: jx-preview
+        step: 
+          image: jenkinsxio/jenkins-x-installer:0.0.27
+          sh: jx preview
