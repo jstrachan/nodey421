@@ -1,0 +1,28 @@
+
+Showing logs for build [32mmeta-jstrachan-nodey421-master-5whxt-3[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-sgzll[0m
+{"level":"warn","ts":1582617638.254582,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582617638.2552195,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-jstrachan-nodey421-master-5whxt-3[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-dhff5[0m
+{"level":"warn","ts":1582617639.2222068,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1582617639.2235706,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmeta-jstrachan-nodey421-master-5whxt-3[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-jstrachan-nodey421-master-5whxt-3[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-jstrachan-nodey421-master-5whxt-jccck[0m
+{"level":"warn","ts":1582617645.3042545,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582617646.4000912,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/nodey421.git @ 5bc5bc0edd6e4cf5be8c2340d406b592a6136511 in path /workspace/source"}
+
+Showing logs for build [32mmeta-jstrachan-nodey421-master-5whxt-3[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:5bc5bc0edd6e4cf5be8c2340d406b592a6136511
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-jstrachan-nodey421-master-5whxt-3[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-jstrachan-nodey421-master-5whxt-3[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Cloning the Jenkins X versions repo https://github.com/*********/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+error: failed to load project config in dir /workspace/source: Validation failures in YAML file /workspace/source/jenkins-x.yml:
+pipelineConfig.pipelines.overrides.0.step.env.0.value: Invalid type. Expected: string, given: boolean
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-effective-pipeline'. The execution of the pipeline has stopped.[0m
