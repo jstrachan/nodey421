@@ -5,9 +5,5 @@ pipelineConfig:
       - pipeline: pullRequest
         name: jx-preview
         step: 
-          image: jenkinsxio/jenkins-x-installer:0.0.27
-          sh: jx preview
-          env:
-          - name: JX_HELM3
-            value: "true"
-          
+          image: jenkinsxio/jenkins-x-installer:0.0.31
+          sh: jx preview          
