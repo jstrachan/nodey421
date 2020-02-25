@@ -9,5 +9,5 @@ pipelineConfig:
           sh: jx preview
           env:
           - name: JX_HELM3
-            value: true
+            value: "true"
           
