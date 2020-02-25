@@ -1,0 +1,55 @@
+
+Showing logs for build [32mmeta-jstrachan-nodey421-pr-3-pr-7phsg-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-wm877[0m
+{"level":"warn","ts":1582617666.6734006,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582617666.6741023,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-jstrachan-nodey421-pr-3-pr-7phsg-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-cpvl5[0m
+{"level":"warn","ts":1582617667.1027899,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1582617667.1040597,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmeta-jstrachan-nodey421-pr-3-pr-7phsg-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-jstrachan-nodey421-pr-3-pr-7phsg-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-jstrachan-nodey421-pr-3-pr-7phsg-62mxf[0m
+{"level":"warn","ts":1582617673.1718216,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582617674.2655127,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/nodey421.git @ 5bc5bc0edd6e4cf5be8c2340d406b592a6136511 in path /workspace/source"}
+
+Showing logs for build [32mmeta-jstrachan-nodey421-pr-3-pr-7phsg-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:5bc5bc0edd6e4cf5be8c2340d406b592a6136511,3:ad517145534824404e40c0d36d0cfee0e9332e08
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow ad517145534824404e40c0d36d0cfee0e9332e08: 5bc5bc0edd6e4cf5be8c2340d406b592a6136511:
+DEBUG: ran git fetch --unshallow origin ad517145534824404e40c0d36d0cfee0e9332e08: 5bc5bc0edd6e4cf5be8c2340d406b592a6136511: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 5bc5bc0edd6e4cf5be8c2340d406b592a6136511
+DEBUG: ran git reset --hard 5bc5bc0edd6e4cf5be8c2340d406b592a6136511 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge ad517145534824404e40c0d36d0cfee0e9332e08
+DEBUG: ran git merge ad517145534824404e40c0d36d0cfee0e9332e08 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 5bc5bc0edd6e4cf5be8c2340d406b592a6136511..HEAD
+Merged SHA ad517145534824404e40c0d36d0cfee0e9332e08 with commit message 'Update index.html' into base branch master
+
+Showing logs for build [32mmeta-jstrachan-nodey421-pr-3-pr-7phsg-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow ad517145534824404e40c0d36d0cfee0e9332e08: 5bc5bc0edd6e4cf5be8c2340d406b592a6136511:
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin ad517145534824404e40c0d36d0cfee0e9332e08: 5bc5bc0edd6e4cf5be8c2340d406b592a6136511:
+DEBUG: ran git fetch origin ad517145534824404e40c0d36d0cfee0e9332e08: 5bc5bc0edd6e4cf5be8c2340d406b592a6136511: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git rev-parse --is-shallow-repository
+DEBUG: Unshallowed git repo in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 5bc5bc0edd6e4cf5be8c2340d406b592a6136511
+DEBUG: ran git reset --hard 5bc5bc0edd6e4cf5be8c2340d406b592a6136511 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge ad517145534824404e40c0d36d0cfee0e9332e08
+DEBUG: ran git merge ad517145534824404e40c0d36d0cfee0e9332e08 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 5bc5bc0edd6e4cf5be8c2340d406b592a6136511..HEAD
+Merged SHA ad517145534824404e40c0d36d0cfee0e9332e08 with commit message 'Update index.html' into base branch master
+
+Showing logs for build [32mmeta-jstrachan-nodey421-pr-3-pr-7phsg-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Cloning the Jenkins X versions repo https://github.com/*********/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+error: failed to load project config in dir /workspace/source: Validation failures in YAML file /workspace/source/jenkins-x.yml:
+pipelineConfig.pipelines.overrides.0.step.env.0.value: Invalid type. Expected: string, given: boolean
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-effective-pipeline'. The execution of the pipeline has stopped.[0m
